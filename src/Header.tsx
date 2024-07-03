@@ -32,14 +32,14 @@ const Root = styled('header')((
   top: 0,
   lineHeight: 1,
   fontSize: theme.typography.fontSize,
-  [theme.breakpoints.up('lg')]: {
+  [theme.breakpoints.up('xs')]: {
     display: 'initial',
   },
 
   [`& .${classes.headerInner}`]: {
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
 
     '.MuiButton-root': {
       borderRadius: 0,
@@ -50,6 +50,10 @@ const Root = styled('header')((
   [`& .${classes.centerActions}`]: {
     marginLeft: 'auto',
     marginRight: 'auto',
+    display: 'none',
+    [theme.breakpoints.up('lg')]: {
+      display: 'initial',
+    },
 
     '.MuiButton-root': {
       padding: theme.spacing(1),
